@@ -2,18 +2,44 @@
 <html lang="en">
     <head>
         <title>Search</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="links">
-            <a href="index.html">Go Back</a>
-        </div>
-        <form action="https://google.com/advanced_search">
-            <label for=""></label>
-            <input id="" type="text" name="as_q" class="textarea">
-
-
-            <input type="submit" value="Google Advanced Search">
-            <input type="hidden" name="tbm" value="isch">
-        </form>
+        <header>
+            <div class="links" style="left: 10px;">
+                <a href="index.html"><img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="google log"></a>                
+            </div>
+            <div class="links">
+                <a href="index.html">Go Back</a>
+            </div>
+        </header>
+        <main style="top: 15%">
+            <div class="appbar"> <label>Advanced Search</label></div>
+            <hr>
+            <form action="https://google.com/search" style="margin: 10px 60px">
+                <label>Find Pages With...</label>
+                <div class="grid">
+                    <label for="all">All These Words:</label>
+                    <input type="text" id="all" name="as_q">
+                    <span class="unnecessary">Type the important words: <strong>tri-colour rat terrier</strong></span>
+                
+                    <label for="exact">This Exact Word or Phrase:</label>
+                    <input type="text" id="exact" name="as_epq">
+                    <span class="unnecessary">Put exact words in quotes: <strong>"rat terrier"</strong></span>
+                
+                    <label for="any">Any of These Words:</label>
+                    <input type="text" id="any" name="as_oq">
+                    <span class="unnecessary">Type <strong>OR</strong> between all the words you want: <strong>miniature OR standard</strong></span>
+                
+                    <label for="none">None of These Words:</label>
+                    <input type="text" id="none" name="as_eq">
+                    <span class="unnecessary">Put a minus sign before words you don’t want: <strong>-rodent, -"Jack Russell"</strong></span>
+                    
+                    <div id="advanced-button">
+                        <input type="submit" value="Advanced Search" class="button">
+                    </div>
+                </div>
+            </form>
+        </main>
     </body>
 </html>
